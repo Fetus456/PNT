@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>PAGINA WEB 2</title>
+</head>
+<body>
+	<h1>1.Botones con alertas y confirmaciones</h1>
+	<br>
+	<button onclick="action_1()" id="Bt1">Alerta</button>
+	<br>
+	<button onclick="action_2()" id="Bt2">Confirmacion</button>
+	<br>
+	<button onclick="action_3()" id="Bt3">Alerta y confirmacion</button>
+	<br>
+	<br>
+	<br>
+	<h1>Despliegue de datos</h1>
+	<br>
+	<h2>Llena los siguientes espacios</h2>
+	<br>
+	<h2>Nombre</h2>
+	<input type="text" name="Nombre" id="txt1">
+	<br>
+	<h2>Apellido</h2>
+	<input type="text" name="Apellido" id="txt2">
+	<br>
+	<button onclick="action_4()" id="Bt4">Concatenar</button>
+	<br>
+
+	<h2>Nombre completo</h2> &nbsp;<output id="Out1"></output>
+	<style type="text/css">
+		/*COMENTARIO EN CSS*/
+		body{
+			background-image: url(Fondo.jpg);
+			background-repeat: round;
+			color: rgba(225, 225, 225, 1.0);
+		}
+		h1{color: rgba(225, 225, 225, 1);}
+		h2{color: rgba(225, 225, 225, 1);}
+		#Out1{color: rgba(225, 225, 225, 1.0);}
+
+	</style>
+	<script type="text/javascript">
+		//COMENTARIO EN SCRIPT
+
+		function action_1() {
+			alert("Alerta!!! Se presiono el boton 1")
+		}
+
+		function action_2(){
+			confirm("Precionar boton 2?")
+		}
+
+		function action_3(){
+			alert("Se preciono el boton 3")
+			confirm("Seguro?")
+		}
+		function action_4(){
+			var Nombrecompleto= document.getElementById("txt1").value+""+
+								document.getElementById("txt2").value
+		
+	 		alert(Nombrecompleto)
+	 		document.getElementById("Out1").innerHTML=Nombrecompleto
+		//Saca la variable Nombrecompleto por Out1					
+		}
+	</script>	
+		
+</body>
+</html>
